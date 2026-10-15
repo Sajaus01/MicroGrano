@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Cite la versión de MicroGrano utilizada y conserve su registro de entorno."
+type: software
+title: "MicroGrano: análisis reproducible de micrografías metalográficas"
+version: 1.0.0
+date-released: 2026-10-15
+repository-code: "https://github.com/Sajaus01/MicroGrano"
+url: "https://github.com/Sajaus01/MicroGrano"
+authors:
+  - family-names: "Saavedra Sajaus"
+    given-names: "Andrés Felipe"
+    affiliation: "Universidad Tecnológica de Pereira"
+keywords:
+  - metalografía
+  - procesamiento de imágenes
+  - segmentación
+  - límites de grano
+  - reproducibilidad

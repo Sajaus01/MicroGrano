@@ -1,0 +1,36 @@
+name: Pruebas de MicroGrano
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+concurrency:
+  group: pruebas-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  pruebas:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    env:
+      QT_QPA_PLATFORM: offscreen
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: |
+            pyproject.toml
+            constraints.txt
+      - run: python -m pip install -c constraints.txt -e ".[gui,dev]"
+      - run: python -m pip check
+      - run: python -m build
+      - run: python -m compileall -q src ejemplos
+      - run: python -m pytest -q
+      - run: python -m micrograno demo --salida prueba_ci
+      - run: python -m micrograno reproducir prueba_ci/sesion.json

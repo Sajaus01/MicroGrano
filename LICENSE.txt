@@ -1,0 +1,13 @@
+Copyright (c) 2026 Andrés Felipe Saavedra Sajaus.
+Todos los derechos reservados.
+
+La publicación del código de MicroGrano no concede una licencia de uso,
+modificación, redistribución, sublicencia o explotación del software.
+Para obtener permisos adicionales se requiere autorización del titular.
+
+Este aviso no limita los derechos que correspondan conforme a la legislación
+aplicable ni los permisos derivados de las condiciones del servicio de GitHub.
+Las dependencias de terceros conservan sus propias licencias y condiciones.
+
+MicroGrano se proporciona sin garantías de exactitud metalográfica, aptitud
+para un propósito determinado ni conformidad con una norma de medición.

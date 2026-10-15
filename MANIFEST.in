@@ -1,0 +1,14 @@
+include LICENSE.txt README.md AVISO_DISTRIBUCION.md CHANGELOG.md CITATION.cff
+include CONTRIBUTING.md SECURITY.md REGISTRO_EDICION.txt constraints.txt main.py
+include iniciar_windows.bat iniciar_linux.sh iniciar_mac.command
+recursive-include src *.py py.typed
+recursive-include tests *.py
+recursive-include docs *.md *.bib
+recursive-include ejemplos *.py *.md
+recursive-include datos/sinteticos *.md *.json *.png *.npy *.npz *.tif *.tiff
+recursive-include lanzador *.py *.cs *.bat *.md *.manifest *.ico *.png
+global-exclude *.py[cod] __pycache__
+prune build
+prune dist
+prune .venv
+prune .micrograno

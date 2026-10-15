@@ -1,0 +1,30 @@
+name: Informar un error
+description: Describir un fallo de instalación, interfaz o cálculo.
+title: "[Error] "
+body:
+  - type: textarea
+    id: entorno
+    attributes:
+      label: Entorno
+      description: Sistema operativo, versión de MicroGrano y versión de Python.
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducir
+      description: Indique la operación y sus parámetros. Use un ejemplo sintético cuando sea posible.
+    validations:
+      required: true
+  - type: textarea
+    id: resultado
+    attributes:
+      label: Resultado observado y esperado
+    validations:
+      required: true
+  - type: textarea
+    id: registro
+    attributes:
+      label: Mensaje de error
+      description: Revise el texto antes de enviarlo. Excluya credenciales, rutas personales e imágenes sin permiso de publicación.
+      render: text

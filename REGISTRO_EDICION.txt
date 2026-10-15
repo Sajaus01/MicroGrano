@@ -1,0 +1,14 @@
+Preparación documental de MicroGrano 1.0.0 para publicación en GitHub
+15 de octubre de 2026
+
+Destino de publicación: https://github.com/Sajaus01/MicroGrano
+
+La preparación documental anterior precisó el origen de la biblioteca para el libro, la autoría confirmada de las micrografías, el asistente vigente de diez pasos, la consulta de código de solo lectura y el carácter histórico de las referencias numéricas del catálogo. También retiró enlaces a documentos privados del equipo de trabajo.
+
+Esta revisión actualiza README.md, AVISO_DISTRIBUCION.md, docs/decisiones_del_software.md y este registro, y añade CONTRIBUTING.md y SECURITY.md. Sustituye el estado de entrega local por el destino de publicación y documenta la decisión del autor de reservar los derechos, sin conceder una licencia de reutilización. Las condiciones se recogen en LICENSE.txt; la recepción de contribuciones no cambia ese régimen.
+
+Se mantienen las distinciones entre las 39 operaciones de la biblioteca, las funciones guiadas del asistente de diez pasos y la consulta de código de solo lectura. Las instrucciones de instalación se ajustan a Python 3.13 de 64 bits, único intérprete admitido por esta distribución con las dependencias fijadas. Se conservan los límites de la comprobación local. No se presenta la configuración de integración continua como una ejecución remota satisfactoria.
+
+Esta revisión documental no modifica las fuentes Python, los lanzadores, los datos sintéticos ni las pruebas. Los cambios de metadatos de publicación y configuración técnica se gestionan por separado y no se atribuyen a esta revisión.
+
+El repositorio excluye entornos virtuales, cachés, registros y capturas voluminosos de desarrollo, imágenes de trabajo y documentos privados. El paquete separado del experimento conserva las micrografías del autor y las instrucciones para reproducir los resultados del libro. No se añaden DOI, contactos personales, datos de financiación ni metadatos de adquisición no documentados.

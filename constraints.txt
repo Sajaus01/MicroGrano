@@ -1,0 +1,12 @@
+# Versiones fijadas para la distribución reproducible con Python 3.13.
+numpy==2.3.5
+scipy==1.17.0
+scikit-image==0.26.0
+pandas==2.2.3
+Pillow==12.3.0
+matplotlib==3.10.8
+pytest==9.0.2
+coverage==7.13.3
+# Interfaz de escritorio; las pruebas se ejecutan también en modo offscreen.
+PySide6==6.10.2
+tifffile==2026.5.15

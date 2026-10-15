@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "micrograno"
+version = "1.0.0"
+description = "Análisis reproducible de micrografías metalográficas"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = "LicenseRef-Proprietary"
+license-files = ["LICENSE.txt"]
+authors = [{name = "Andrés Felipe Saavedra Sajaus"}]
+dependencies = [
+    "numpy>=2.0,<3", "scipy>=1.14,<2", "scikit-image>=0.26,<0.27",
+    "tifffile>=2024.9", "pandas>=2.2,<3", "Pillow>=11,<13", "matplotlib>=3.9,<4"
+]
+
+[project.urls]
+Repository = "https://github.com/Sajaus01/MicroGrano"
+Documentation = "https://github.com/Sajaus01/MicroGrano/tree/main/docs"
+Issues = "https://github.com/Sajaus01/MicroGrano/issues"
+
+[project.optional-dependencies]
+gui = ["PySide6==6.10.2"]
+dev = ["pytest>=8,<10", "coverage>=7.13,<8", "build>=1,<2"]
+
+[project.scripts]
+micrograno = "micrograno.cli:main"
+micrograno-lab = "micrograno_lab.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+micrograno = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = ["error::DeprecationWarning:micrograno.*"]

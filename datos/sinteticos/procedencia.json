@@ -1,0 +1,7 @@
+{
+  "origen": "Generados por micrograno.sinteticos.crear_conjunto",
+  "sinteticos": true,
+  "uso": "Comprobar el software; no investigación metalográfica.",
+  "escala_convencional_um_px": 0.5,
+  "advertencia": "La escala es una convención numérica, no una calibración de microscopio."
+}
